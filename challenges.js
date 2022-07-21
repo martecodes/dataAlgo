@@ -84,3 +84,7 @@ function maxSubarraySum(arr, num) {
   }
   return total;
 }
+
+function minSubArrayLen (arr, num) {
+  
+}
