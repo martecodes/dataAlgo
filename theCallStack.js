@@ -1,0 +1,42 @@
+function takeShower() {
+    return "showering";
+}
+
+function eatBreakfast() {
+    let meal = cookFood()
+    return `Eating ${meal}`;
+}
+
+function cookFood() {
+    let items = ["oatmeal", "eggs", "protein shake"];
+    return items[Math.floor(Math.random()*items.length)];
+}
+
+function wakeUp() {
+    takeShower();
+    eatBreakfast();
+    return "ok I'm ready to work!";
+}
+
+
+// adding helper to recursion
+function collectOddValues(arr) {
+    const result = [];
+
+    function helper(helperInput) {
+        if (helperInput == 0) return;
+
+        if (helperInput[0] % 2 != 0) {
+            result.push(helperInput[0]);
+        }
+
+        helper(helperInput.slice(1));
+    }
+
+    helper(arr);
+
+    return result;
+}
+
+
+console.log(collectOddValues([1,2,3,4,5,6,7,8,9]));
